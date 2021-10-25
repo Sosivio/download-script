@@ -10,7 +10,7 @@
 # Env vars:
 declare -a microServices
 
-version="ready" # maybe needs to be changed ... 
+version="stable" # maybe needs to be changed ... 
 microServices=("simulations/oomkill" "simulations/mem-pending" "simulations/throttling" "simulations/multi-processes")
 ourDockerRepo="release.sosiv.io"
 userName="customer"               # Client default user
