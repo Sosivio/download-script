@@ -9,7 +9,6 @@
 
 # Env vars:
 declare -a microServices
-
 version="stable" # maybe needs to be changed ... 
 microServices=("simulations/oomkill" "simulations/mem-pending" "simulations/throttling" "simulations/multi-processes")
 ourDockerRepo="release.sosiv.io"
