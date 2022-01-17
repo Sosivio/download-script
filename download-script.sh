@@ -12,7 +12,7 @@ declare -a microServices
 
 # dev-collector sosiviodb dash as testing. 
 
-version="release-1.2"
+version="release-1.2-RC2"
 microServices=("analyzer" "authentication" "actuator" "classifier" "crud-manager" "contract-testing" "communicator" "sosivio-node-collector" "correlation-entities" "ruleengine" "draingo" "nsqd" "nsqadmin" "nsqlookupd" "sosivio-dashboard" "sequence-recognition" "discovery-engine" "sosiviodb")
 ourDockerRepo="release.sosiv.io"
 userName="customer"           # Client default user
@@ -176,12 +176,12 @@ if [ $OS == "Linux" ]; then
             for i in "${microServices[@]}";
             do
                 echo "Saving image $i"
-                sudo docker save $ourDockerRepo/$i:$version > $(pwd)/$directoryName/$i.tar #TODO: put this on /tmp instead plain to client eyes ???
+                sudo docker save $ourDockerRepo/$i:$version > $(pwd)/$directoryName/$i.tar 
             done
           echo -e "\nCompressing Images...\n"
           sudo tar cvf $(pwd)/$tarName $directoryName/*
     	    echo -e "\nPlease copy \"$tarName\" to the disconnected environment to continue the process."
-          sudo rm -rf SosivioImages
+          # sudo rm -rf SosivioImages
         fi
 
     ## ------------------------- Pushing ---------------------------##
@@ -295,7 +295,7 @@ elif [ $OS == "Darwin" ]; then
           echo -e "\nCompressing Images...\n"
           sudo tar cvf $(pwd)/$tarName $directoryName/*
     	    echo -e "\nPlease copy the file \"$tarName\" to the disconnected environment to continue the process."
-          sudo rm -rf SosivioImages
+          # sudo rm -rf SosivioImages
         fi
 
     ## ------------------------- Pushing ---------------------------##
