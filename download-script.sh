@@ -179,7 +179,7 @@ if [ $OS == "Linux" ]; then
                 sudo docker save $ourDockerRepo/$i:$version > $(pwd)/$directoryName/$i.tar #TODO: put this on /tmp instead plain to client eyes ???
             done
           echo -e "\nCompressing Images...\n"
-          sudo tar cvf $(pwd)/$tarName $directoryName/*
+          sudo tar cvzf $(pwd)/$tarName $directoryName/*
     	    echo -e "\nPlease copy \"$tarName\" to the disconnected environment to continue the process."
           sudo rm -rf SosivioImages
         fi
@@ -293,7 +293,7 @@ elif [ $OS == "Darwin" ]; then
                 sudo docker save $ourDockerRepo/$i:$version > $(pwd)/$directoryName/$i.tar
             done
           echo -e "\nCompressing Images...\n"
-          sudo tar cvf $(pwd)/$tarName $directoryName/*
+          sudo tar cvzf $(pwd)/$tarName $directoryName/*
     	    echo -e "\nPlease copy the file \"$tarName\" to the disconnected environment to continue the process."
           sudo rm -rf SosivioImages
         fi
