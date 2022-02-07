@@ -12,7 +12,7 @@ declare -a microServices
 
 # dev-collector sosiviodb dash as testing. 
 
-version="release-1.2.0"
+version="release-1.2.1"
 microServices=("analyzer" "authentication" "actuator" "classifier" "crud-manager" "contract-testing" "communicator" "sosivio-node-collector" "sosivio-node-pinger" "correlation-entities" "ruleengine" "draingo" "nsqd" "nsqadmin" "nsqlookupd" "sosivio-dashboard" "sequence-recognition" "discovery-engine" "sosiviodb")
 ourDockerRepo="release.sosiv.io"
 userName="customer"           # Client default user
