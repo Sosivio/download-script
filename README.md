@@ -1,6 +1,6 @@
 # download-script
 
-This Project is for the download-script for clients who work in disconnected environements
+This Project is for th download-script for clients who work in disconnected environements
 
 ## How does the client will use that script ?
 
