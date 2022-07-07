@@ -13,7 +13,7 @@ declare -a microServices
 # dev-collector sosiviodb dash as testing. 
 
 version=release-1.4.1.1
-microServices=("analyzer" "authentication" "actuator" "classifier" "crud-manager" "contract-testing" "communicator" "sosivio-node-collector" "sosivio-node-pinger" "correlation-entities" "draingo" "nsqd" "nsqadmin" "nsqlookupd" "sosivio-dashboard" "sequence-recognition" "discovery-engine" "sosiviodb" "notifier" )
+microServices=("analyzer" "authentication" "actuator" "classifier" "crud-manager" "contract-testing" "communicator" "sosivio-node-collector" "sosivio-node-pinger" "correlation-entities" "draingo" "nsq" "sosivio-dashboard" "sequence-recognition" "discovery-engine" "sosiviodb" "notifier" "prediction-engine")
 ourDockerRepo="release.sosiv.io"
 userName="customer"           # Client default user
 password="customer"           # Client default user password
